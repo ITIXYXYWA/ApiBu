@@ -13,12 +13,12 @@ export default class {
     if (this.hasNext()) {
       return this._items[this._index++]
     } else {
-      return null
+      return false
     }
   }
 
   hasNext () {
-    return this._index <= this._items.length
+    return this._index < this._items.length
   }
 
   reset () {
