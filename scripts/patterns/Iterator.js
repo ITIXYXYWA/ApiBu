@@ -29,6 +29,5 @@ export default class {
     for (let item = this.first(); this.hasNext(); item = this.next()) {
       cb(item)
     }
-  } 
-
+  }
 }
