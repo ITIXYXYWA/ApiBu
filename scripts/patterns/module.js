@@ -1,10 +1,10 @@
-import Factory from "./factory.js"
+import Factory from "./Factory.js"
 import ProxyBuilder from "./ProxyBuilder.js"
 
 const ApiBu = (function (a) {
 
   return {
-    Iterator: Factory.newAwesomeClass,
+    Iterator: new Factory().newAwesomeClass,
     Req: new ProxyBuilder(),
   }
 }())
