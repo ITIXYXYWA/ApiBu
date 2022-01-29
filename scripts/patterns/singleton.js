@@ -9,3 +9,5 @@ class Singleton {
     return this
   }
 }
+
+export default Singleton

@@ -1,14 +1,10 @@
-import Iterator from "./Iterator.js"
+import Factory from "./factory.js"
 
 export const Module = (function () {
   const privateData = 'hello world!'
 
   return {
-    getData: function () {
-      console.log(privateData)
-    },
-
-    Iterator: data => new Iterator(data)
+    Factory: Factory
   }
 
 }())

@@ -1,14 +1,11 @@
-import { Module } from "./patterns/module.js";
+import { Module } from "./patterns/module.js"
 
-Module.getData()
+const Factory = Module.Factory
 
-const testArray = [1, 'dog', 'eleven']
 
-const Iterator = Module.Iterator(testArray)
 
-// Iterator.each((item) => console.log(item))
+const data = ['12412', '214124', 1412]
 
-console.log(Iterator.next())
-console.log(Iterator.next())
-console.log(Iterator.next())
-console.log(Iterator.next())
+const Iter = Factory.newAwesomeClass(data)
+
+console.log(Iter.next())
