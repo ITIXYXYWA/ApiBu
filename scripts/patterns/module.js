@@ -1,10 +1,12 @@
 import Factory from "./factory.js"
+import ProxyBuilder from "./ProxyBuilder.js"
 
-export const Module = (function () {
-  const privateData = 'hello world!'
+const ApiBu = (function (a) {
 
   return {
-    Factory: Factory
+    Iterator: Factory.newAwesomeClass,
+    Req: new ProxyBuilder(),
   }
-
 }())
+
+export default ApiBu

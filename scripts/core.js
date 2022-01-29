@@ -1,11 +1,13 @@
-import { Module } from "./patterns/module.js"
+import ApiBu from './patterns/module.js'
 
-const Factory = Module.Factory
+const Req = ApiBu.Req
+  .addUrl('https://jsonplaceholder.typicode.com')
+  .addUri('/users')
+  .build()
 
+Req.then(posts => {
+  const postsIter = ApiBu.Iterator(posts)
+  // posts.forEach(el => console.log(el))
+  postsIter.each(item => console.log(item))
+})
 
-
-const data = ['12412', '214124', 1412]
-
-const Iter = Factory.newAwesomeClass(data)
-
-console.log(Iter.next())

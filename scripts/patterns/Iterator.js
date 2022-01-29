@@ -18,7 +18,7 @@ export default class {
   }
 
   hasNext () {
-    return this._index < this._items.length
+    return this._index <= this._items.length
   }
 
   reset () {
