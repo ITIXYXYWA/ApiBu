@@ -1,14 +1,32 @@
 import ApiBu from './patterns/Module.js'
+import LogEach from './patterns/template.js'
 
 const Req = ApiBu.Req
   .addUrl('https://jsonplaceholder.typicode.com')
   .addUri('/users')
   .build()
 
+const Req_2 = ApiBu.Req
+  .addUrl('https://jsonplaceholder.typicode.com')
+  .addUri('/posts')
+  .build()
 
-Req.then(posts => {
-  const postsIter = ApiBu.Iterator(posts)
-  // posts.forEach(el => console.log(el))
-  postsIter.each(item => console.log(item))
+
+Req.then(users => {
+  new LogEach(users).logEach()
 })
+
+Req_2.then(posts => {
+  const IteratorPosts = ApiBu.Iterator(posts)
+  console.log(
+    IteratorPosts.next(),
+    IteratorPosts.next(),
+    IteratorPosts.next(),
+    IteratorPosts.next(),
+    IteratorPosts.next(),
+    IteratorPosts.next()
+  )
+})
+
+
 
