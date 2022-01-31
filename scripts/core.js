@@ -1,5 +1,5 @@
 import ApiBu from './patterns/Module.js'
-import LogEach from './patterns/template.js'
+import { LogEach, getFirst } from './patterns/template.js'
 
 const Req = ApiBu.Req
   .addUrl('https://jsonplaceholder.typicode.com')
@@ -26,6 +26,10 @@ Req_2.then(posts => {
     IteratorPosts.next(),
     IteratorPosts.next()
   )
+
+    console.log(
+      new getFirst(posts).first()
+    )
 })
 
 

@@ -12,4 +12,14 @@ class LogEach extends Iterator {
   }
 }
 
-export default LogEach
+class getFirst extends Iterator {
+  constructor(data) {
+    super(data)
+  }
+
+  first() {
+    return (this._items[0])
+  }
+}
+
+export {LogEach, getFirst}
