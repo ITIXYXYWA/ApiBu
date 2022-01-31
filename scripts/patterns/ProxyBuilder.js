@@ -26,6 +26,8 @@ class ProxyBuilder {
 	build () {
     return this.Builder.build()
 	}
+
+	makeReq () { }
 }
 
 export default ProxyBuilder
