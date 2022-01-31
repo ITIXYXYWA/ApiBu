@@ -1,11 +1,6 @@
 import ApiBu from './patterns/Module.js'
 import { GetReq } from './patterns/template.js'
 
-const Req = ApiBu.Req
-  .addUrl('https://jsonplaceholder.typicode.com')
-  .addUri('/users')
-  .build()
-
 const Req_2 = ApiBu.Req
   .addUrl('https://jsonplaceholder.typicode.com')
   .addUri('/posts')
