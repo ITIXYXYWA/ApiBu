@@ -11,11 +11,6 @@ const Req_2 = ApiBu.Req
   .addUri('/posts')
   .build()
 
-
-// Req.then(users => {
-//   new LogEach(users).each()
-// })
-
 Req_2.then(posts => {
   const IteratorPosts = ApiBu.Iterator(posts)
   console.log(
