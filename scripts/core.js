@@ -13,7 +13,7 @@ const Req_2 = ApiBu.Req
 
 
 Req.then(users => {
-  new LogEach(users).logEach()
+  new LogEach(users).each()
 })
 
 Req_2.then(posts => {

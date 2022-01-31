@@ -5,7 +5,7 @@ class LogEach extends Iterator {
     super(data)
   }
 
-  logEach () {
+  each () {
     for (let item = this.first(); this.hasNext(); item = this.next()) {
       console.log(item)
     }
